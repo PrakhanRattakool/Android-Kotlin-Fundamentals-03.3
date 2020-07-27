@@ -2,9 +2,7 @@ package com.example.android.navigation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentTitleBinding
@@ -31,8 +29,6 @@ class TitleFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
@@ -41,7 +37,6 @@ class TitleFragment : Fragment() {
             view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
         return binding.root
-    }
     }
 
     companion object {
